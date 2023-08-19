@@ -29,6 +29,7 @@ app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.send({
         error: {
+            success: false,
             status: err.status || 500,
             message: err.message
         }
